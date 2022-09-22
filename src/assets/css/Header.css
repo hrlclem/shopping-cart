@@ -1,0 +1,33 @@
+.header{
+    display:flex;
+    background:lightgrey;
+    align-items: center;
+}
+
+
+.rightSideHeader{
+    right: 0;
+    text-align: right;
+    position:absolute;
+    display:flex;
+    align-items: center;
+}
+.headerList{
+    display:flex;
+}
+
+li{
+    list-style-type: none;
+    margin-right:40px;
+}
+
+.headerLogo{
+    height: 80px;
+    margin-left:20px;
+}
+
+.shopLogo{
+    filter: invert(19%) sepia(74%) saturate(3793%) hue-rotate(346deg) brightness(83%) contrast(97%);
+    height: 36px;
+    margin:10px;
+}
