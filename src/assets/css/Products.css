@@ -1,0 +1,44 @@
+.pageTitle{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.allProductsDiv{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:20px;
+}
+
+.uniqueProductDiv{
+    border: 1px solid #cecece;
+    position: relative;
+    padding:12px;
+}
+
+.productLink{
+    text-decoration: none;
+}
+
+.productInfo{
+    display:flex;
+}
+.productTitle{
+    font-size: 20px;
+    margin-bottom: 6px;
+    position: absolute;
+    bottom: 0;
+}
+.productPrice{
+    margin-top: 8px;
+}
+
+.productImgAll{
+    max-height: 400px; 
+    width: 100%; 
+    object-fit: contain
+}
+

@@ -1,19 +1,33 @@
 import '../assets/css/Header.css';
 import React from 'react';
-import headerLogo from "../assets/img/headerLogo.png";
 import shopLogo from "../assets/img/shopLogo.png";
+import { Link } from 'react-router-dom';
 
 
 
 const Header = () => {
 
+    const headerBtnStyle = {
+        color:'white'
+    };
+
     return(
         <div className='header'>
-            <img alt="headerLogo" className="headerLogo" src={headerLogo}></img>
+            <Link className="headerBtnLogo" to="/">
+                <div className="headerLogo">BestStore</div>
+            </Link>
+
             <div className="rightSideHeader">
                 <ul className="headerList">
-                    <li>Home</li>
-                    <li>About</li>
+                    <Link className="headerBtn" style={headerBtnStyle} to="/">
+                        <li>Home</li>
+                    </Link>
+                    <Link className="headerBtn" style={headerBtnStyle} to="/products">
+                        <li>Products</li>
+                    </Link>                    
+                    <Link className="headerBtn" style={headerBtnStyle} to="/about">
+                        <li>About</li>
+                    </Link>
                 </ul>
                 <img alt="headerLogo" className="shopLogo" src={shopLogo}></img>
             </div>

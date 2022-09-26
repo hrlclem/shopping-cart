@@ -1,0 +1,43 @@
+
+
+.homepage{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 6rem;
+    margin-bottom: 20rem;
+}
+
+.leftPresentation{
+    display:inline;
+    align-items: center;
+    justify-content: center;
+}
+        .titlePresentation{
+            font-weight: bold;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+            color:#0D7377;
+        }
+        .descriptionPresentation{
+            font-weight: bold;
+            color:#323232;
+            font-size: 60px;
+        }
+
+        .presentationBtn{
+            color:white;
+            font-size: 20px;
+            padding: 10px 60px 10px 60px;
+            background: black;
+            border-radius: 28px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+.homepagePic{
+    border-radius:8%;
+    margin: 20px 40px;
+}
+
