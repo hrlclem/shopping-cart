@@ -57,3 +57,8 @@ li{
     height: 36px;
     margin-right:40px;
 }
+
+.shoppingCartQuantityDiv{
+    color: white;
+    position: absolute;
+}

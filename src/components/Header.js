@@ -2,7 +2,7 @@ import '../assets/css/Header.css';
 import React from 'react';
 import shopLogo from "../assets/img/shopLogo.png";
 import { Link } from 'react-router-dom';
-
+import {cartContent} from "../CartAction";
 
 
 const Header = () => {
@@ -29,7 +29,10 @@ const Header = () => {
                         <li>About</li>
                     </Link>
                 </ul>
-                <img alt="headerLogo" className="shopLogo" src={shopLogo}></img>
+                <Link className="logoShoppingCartHeader" to="/shoppingCart">
+                    <img alt="headerLogo" className="shopLogo" src={shopLogo}></img>
+                    <div className="shoppingCartQuantityDiv">{cartContent.length}</div>
+                </Link>  
             </div>
         </div>
     )
