@@ -2,6 +2,7 @@ import React, {useState, useEffect}  from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/Products.css';
 import ProductInfo from './ProductInfo';
+import Categories from './Categories';
 
 const AllProducts = () => {
 
@@ -23,16 +24,18 @@ const AllProducts = () => {
         <div className='products'>  
             <div className='pageTitle'>Shop page with all products</div>
             <div className='mainDiv'>
-                <div className='leftPanelDiv'>
-                    <div className='categoryDiv'>
-                        <div className='categoryTitle'>Categories</div>
-                        <li>
-                            <ul>Dog</ul>
-                            <ul>Cat</ul>
-                            <ul>Dolphin</ul>
-                        </li>
-                    </div>
-                </div>
+                {/* <div className='categoriesDiv'>
+                    {items.map(category => {
+                            return(
+                                <div className='categoryList' key={category.id}>
+                                        <Categories 
+                                            key={category.id} 
+                                            category={category.category} 
+                                        />
+                                </div>
+                            )
+                    })};
+                </div> */}
                 <div className='allProductsDiv'>
                     {items.map(item => {
                         return(
@@ -52,7 +55,7 @@ const AllProducts = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default AllProducts;

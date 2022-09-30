@@ -39,9 +39,11 @@ const ItemDetail = () => {
                     <img alt='productImg' src={item.thumbnail}></img>
                 </div>
                 <div className='rightProductInfo'>  
-                    <h1 className="productTitle rightDiv">{item.title}</h1>
-                    <div className="productDescription rightDiv">{item.description}</div>            
-                    <div className="productPrice rightDiv">{item.price}€</div>  
+                    <div className='textProductInfo'>
+                        <h1 className="productTitle rightDiv">{item.title}</h1>
+                        <div className="productDescription rightDiv">{item.description}</div>            
+                        <div className="productPrice rightDiv">{item.price}€</div>  
+                    </div>
                     <div className='quantityManageDiv'>
                         <div className='updateQuantityDiv rightDiv'>
                             <button className='substractBtn countBtn' onClick={subQty}>-</button>  

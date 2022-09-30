@@ -7,10 +7,12 @@ const ProductInfo = (props) => {
 
     return(
         <div className='uniqueProduct' key={key}>
-                <img alt="productImg" className='productImgAll' src={thumbnail}></img>
-                <div className='productInfo'>
-                    <div className='productTitle'>{product}</div>
-                    <div className='productPrice'>{price}€</div>
+                <div className="imgContainer">
+                    <img alt="productImg" className='productImgAll' src={thumbnail}></img>
+                </div>
+                <div className='allProductInfo'>
+                    <div className='allProductTitle'>{product}</div>
+                    <div className='allProductPrice'>{price}€</div>
                 </div>
         </div>
 

@@ -10,7 +10,13 @@
 .productDetails{
     display:flex;
     justify-content: center;
+    margin: 6%;
     margin-top: 3%;
+    border: 1px solid #cecece;
+    border-radius: 6px;
+    padding: 4%;
+    background-color: white;
+    box-shadow: 2px 5px 10px  #888888;
 }
 
 .breadcrumbLine{
@@ -47,6 +53,7 @@
 
 .quantityManageDiv{
     width:100%;
+
 }
 
 .updateQuantityDiv{
