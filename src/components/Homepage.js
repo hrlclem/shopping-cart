@@ -3,7 +3,7 @@ import React from 'react';
 import homepagePic from "../assets/img/homepagePic.jpg";
 import {Link} from 'react-router-dom';
 
-const Homepage = () => {
+const Homepage = ({cartItems}) => {
 
     return (
         <div className="fullPage">

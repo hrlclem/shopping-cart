@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import '../assets/css/ItemDetail.css';
 
 
-const ItemDetail = () => {
+
+const ItemDetail = ({cartItems, addProduct}) => {
 
     const productId = useParams().id;
 
@@ -50,7 +51,7 @@ const ItemDetail = () => {
                             <div className='quantityCount'>{itemQty}</div>          
                             <button className='addBtn countBtn' onClick={addQty}>+</button>          
                         </div>
-                        <button className='productAddToCartBtn rightDiv'>Add to Cart</button>                  
+                        <button className='productAddToCartBtn rightDiv'  onClick={() => addProduct(Number(productId), itemQty)}>Add to Cart</button>                  
                     </div>
                 </div>
             </div>

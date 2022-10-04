@@ -2,13 +2,15 @@ import React, {useState, useEffect}  from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/Products.css';
 import ProductInfo from './ProductInfo';
-import Categories from './Categories';
+// import Categories from './Categories';
 
-const AllProducts = () => {
+
+
+const AllProducts = ({cartItems, addProduct}) => {
 
     useEffect(() => {
         fetchProducts();
-    },[])
+    })
 
     const [items, setItems] = useState([]);
 
@@ -17,7 +19,6 @@ const AllProducts = () => {
         const items = await data.json();
 
         setItems(items.products);
-        console.log(items.products)
     }
 
     return(
@@ -48,7 +49,7 @@ const AllProducts = () => {
                                         thumbnail={item.thumbnail}
                                     />
                                 </Link>
-                                <button className='productBtn'>Add to cart</button>
+                                <button className='productBtn' onClick={() => {addProduct(Number(item.id), 1)}}>Add to cart</button>
                             </div>
                         )
                     })}
