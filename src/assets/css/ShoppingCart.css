@@ -1,0 +1,121 @@
+.cartMain{
+    padding:20px;
+    background-color: white;
+    margin: 80px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top:60px;
+    border-radius: 10px;
+}
+
+.cartMain{
+    padding-left:80px;
+    padding-right:80px;
+    padding-bottom: 130px;
+}
+    .headerCartDiv{
+        display:flex;
+        justify-content: space-between;
+    }
+        .cartTitle{
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-size: 35px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .cartRemoveBtn{
+            margin-top: 20px;
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: 400;
+            height:50px;
+            border-radius: 10px;
+        }
+
+
+.cartContentDiv{
+    width: 100%;
+}
+    .fullItemCart{
+        display:flex;
+        justify-content: space-between;
+        height:120px;
+    }
+        .imgContainerCart{
+            display:flex;
+            width:50%;
+            padding-left: 20px;
+            padding-right: 20px;
+            align-items: center;
+
+        }
+        .prodImgCart{
+            max-width:120px;
+            max-height:120px;
+            display:flex;
+        }
+            .prodCartTitle{
+                margin-left: 80px;
+                font-weight: 600;
+                font-size: 20px;
+                font-family: Arial;
+                color: rgb(55, 55, 55);
+            }
+        .rightSideCart{
+            display:flex;
+            align-items: center;
+            width:50%;
+            padding-left: 20px;
+            justify-content: right;
+            align-items: center;
+        }
+            .updateQtyDiv{
+                display:flex;
+            }
+            .priceRmvDiv{
+                padding-left: 160px;
+            }
+                .prodCartPrice{
+                    font-weight: 600;
+                    font-size: 20px;
+                    font-family: Arial;
+                    color: rgb(55, 55, 55);
+                    margin-bottom: 10px;
+                }
+                .removeCartItem{
+                    font-weight: 200;
+                    font-size: 12px;
+                    font-family: Arial;
+                    color: rgb(218, 13, 13);
+                    margin-bottom: 10px;
+                }
+
+.totalCartDiv{
+    margin-top: 30px;
+    display:flex;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:20%;
+    position: relative;
+    float: right;
+}
+    .titlesPrice{
+        font-weight: 600;
+        text-align: right;
+        font-family: arial;
+    }
+        .totalCartTitle{
+            font-size: 25px;
+        }
+    .valuesPrice{
+        text-align: right;
+        font-family: arial;
+    }
+        .totalCart{
+            font-weight: 600;
+            font-size: 25px;
+        }

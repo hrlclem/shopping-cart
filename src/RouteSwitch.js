@@ -16,23 +16,47 @@ function RouteSwitch() {
 
   const addProduct = (productId, qty) => {
     const ProductExist = cartItems.find((item) => item.productId === productId);
-
     if(ProductExist){
-      setCartItems(cartItems.map((item)=> item.productId === productId ?
-      {...ProductExist, quantity: ProductExist.quantity + qty}: item)
+      setCartItems(cartItems.map((item)=> 
+        item.productId === productId ? 
+        {...ProductExist, quantity: ProductExist.quantity + qty}
+        : item)
       );
     }
     else{
-      setCartItems([...cartItems, {productId: productId, quantity: qty}])
+      setCartItems([...cartItems, {productId: productId, quantity: qty}]);
     }
   }
 
+  const removeProduct = (productId, qty) =>{
+    const ProductExist = cartItems.find((item) => item.productId === productId);
+    if(ProductExist.quantity === 1){
+      setCartItems(cartItems.filter((item) => item.productId !== productId))
+    }
+    else {
+      setCartItems(cartItems.map((item)=> 
+        item.productId === productId ? 
+        {...ProductExist, quantity: ProductExist.quantity - 1}
+        : item)
+    );
+    }
+  }
+
+  const removeProdComplete = (productId) => {
+      setCartItems(cartItems.filter((item) => item.productId !== productId))
+    };
+  
+  const emptyCart = () => {
+    setCartItems([]);
+  };
+
+  
 
 
   return (
       <Router>
         <div className="App">
-        <Header cartItems={cartItems} />
+        <Header cartItems={cartItems}/>
           <Routes>
               <Route exact path="/" 
                   element={<Homepage/>} />
@@ -48,7 +72,11 @@ function RouteSwitch() {
                   element={
                   <ShoppingCart 
                     cartItems={cartItems} 
+                    setCartItems={setCartItems}
                     addProduct={addProduct}
+                    removeProduct={removeProduct}
+                    removeProdComplete={removeProdComplete}
+                    emptyCart={emptyCart}
                   />}/>
               <Route path='/products/:id' 
                   element={
