@@ -1,4 +1,4 @@
-# Shopping Card for BestStore
+# Shopping Cart for BestStore
 ## Introduction
 🛒 Shopping cart for BestStore is a new project following The Odin Project cursus. The aim is to practice React.js, router and fetching API.
 The API used was [https://dummyjson.com/](https://dummyjson.com/).
